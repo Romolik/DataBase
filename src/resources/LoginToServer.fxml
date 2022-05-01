@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.LoginToServerController">
+   <children>
+      <Label layoutX="95.0" layoutY="17.0" text="Список доступных серверов">
+         <font>
+            <Font name="Georgia Italic" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="localHostButton" layoutX="300.0" layoutY="130.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" text="Localhost">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="nsuButton" layoutX="300.0" layoutY="270.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" text="NSU">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="300.0" layoutY="420.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="240.0" text="Выход">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

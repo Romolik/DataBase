@@ -39,6 +39,16 @@ public class DatabaseFields {
 	private String lastIdInvoice;
 	private String lastIdOrderShop;
 
+	public boolean isNewRow() {
+		return newRow;
+	}
+
+	public void setNewRow(boolean newRow) {
+		this.newRow = newRow;
+	}
+
+	private boolean newRow = false;
+
 	public String getLastIdBuyer() {
 		return lastIdBuyer;
 	}
