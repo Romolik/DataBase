@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class DatabaseFields {
 	private String idBuyer;
+	private String nameProduct;
 	private String firstName;
 	private String lastName;
 	private Double moneySpent;
@@ -38,6 +39,18 @@ public class DatabaseFields {
 	private String lastIdEmployee;
 	private String lastIdInvoice;
 	private String lastIdOrderShop;
+	private Double costPiece;
+	private Double cost100g;
+
+	public Double getTradeTurnover() {
+		return tradeTurnover;
+	}
+
+	public void setTradeTurnover(Double tradeTurnover) {
+		this.tradeTurnover = tradeTurnover;
+	}
+
+	private Double tradeTurnover;
 
 	public boolean isNewRow() {
 		return newRow;
@@ -56,6 +69,32 @@ public class DatabaseFields {
 	public void setLastIdBuyer(String lastIdBuyer) {
 		this.lastIdBuyer = lastIdBuyer;
 	}
+
+
+	public Double getCostPiece() {
+		return costPiece;
+	}
+
+	public void setCostPiece(Double costPiece) {
+		this.costPiece = costPiece;
+	}
+
+	public Double getCost100g() {
+		return cost100g;
+	}
+
+	public void setCost100g(Double cost100g) {
+		this.cost100g = cost100g;
+	}
+
+	public String getNameProduct() {
+		return nameProduct;
+	}
+
+	public void setNameProduct(String nameProduct) {
+		this.nameProduct = nameProduct;
+	}
+
 
 	public String getLastIdEmployee() {
 		return lastIdEmployee;

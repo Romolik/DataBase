@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.util.Objects;
 
@@ -45,6 +46,37 @@ public abstract class MainWindowController implements Initializable {
 				getClass().getResource("/application.css")).toExternalForm());
 		stage.setScene (scene);
 		stage.show ();
+	}
+
+	protected void showStageTable(String nameFxmlFile) {
+		FXMLLoader loader = new FXMLLoader ();
+		loader.setLocation (getClass ().getResource (nameFxmlFile));
+		try {
+			loader.load ();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		MainWindowController mainWindowController = loader.getController();
+		mainWindowController.setNameRole(getNameRole());
+		mainWindowController.setStage(getStage());
+		mainWindowController.setConnection(getConnection());
+		showStage(loader);
+	}
+
+	protected void loadMainMenuWindow(ChooseRoleController.NameRole nameRole) {
+		FXMLLoader loader = new FXMLLoader ();
+		loader.setLocation (getClass ().getResource ("/MainMenuWindow.fxml"));
+		try {
+			loader.load ();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		MainMenuWindowController mainMenuWindowController = loader.getController();
+		mainMenuWindowController.setNameRole(nameRole);
+		mainMenuWindowController.setRoleLabel();
+		mainMenuWindowController.setStage(getStage());
+		mainMenuWindowController.setConnection(getConnection());
+		showStage(loader);
 	}
 
 }

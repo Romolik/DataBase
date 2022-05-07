@@ -1,9 +1,17 @@
 package main.java.ru.nsu.shchiptsov;
 
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCombination;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import main.java.ru.nsu.shchiptsov.sellers.MainWindowSellersController;
 
 import java.awt.*;
@@ -11,6 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import main.java.ru.nsu.shchiptsov.ChooseRoleController.NameRole;
 
@@ -23,35 +32,58 @@ public class MainMenuWindowController extends MainWindowController {
 	private Button sellersButton;
 	@FXML
 	private Button ordersButton;
+	@FXML
+	private Button accountingButton;
+	@FXML
+	private Button requestButton;
+	@FXML
+	private Button reportsButton;
 
-	private NameRole nameRole;
-
-	private HashMap<NameRole, ArrayList<String>> accessRights = new HashMap<>();
+	private HashMap<NameRole, ArrayList<String>> accessRights;
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		initializeAccessesRole();
 		cancelButton.setOnAction(event -> {
 			showStageTable("/ChooseRole.fxml");
+
 		});
 		sellersButton.setOnAction(event -> {
-			showStageTable("/MainWindowSellers.fxml");
+			if (accessRights.get(getNameRole()).contains("MainWindowSellers")) {
+				showStageTable("/sellers/MainWindowSellers.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
+		});
+		ordersButton.setOnAction(event -> {
+			if (accessRights.get(getNameRole()).contains("MainWindowOrders")) {
+				showStageTable("/orders/MainWindowOrders.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
+		});
+		accountingButton.setOnAction(event -> {
+			if (accessRights.get(getNameRole()).contains("MainWindowAccounting")) {
+				showStageTable("/accounting/MainWindowAccounting.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
+		});
+		requestButton.setOnAction(event -> {
+			if (accessRights.get(getNameRole()).contains("MainWindowProductRequest")) {
+				showStageTable("/requests/MainWindowProductRequest.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
+		});
+		reportsButton.setOnAction(event -> {
+			if (accessRights.get(getNameRole()).contains("MainWindowReports")) {
+				showStageTable("/reports/MainWindowReports.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
 		});
 
-	}
-
-	private void showStageTable(String nameFxmlFile) {
-		FXMLLoader loader = new FXMLLoader ();
-		loader.setLocation (getClass ().getResource (nameFxmlFile));
-		try {
-			loader.load ();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		MainMenuWindowController mainWindowController = loader.getController();
-		mainWindowController.setStage(getStage());
-		mainWindowController.setConnection(getConnection());
-		showStage(loader);
 	}
 
 	public void setRoleLabel() {
@@ -59,15 +91,53 @@ public class MainMenuWindowController extends MainWindowController {
 	}
 
 	private void initializeAccessesRole() {
-		nameRole = getNameRole();
-		ArrayList<String> listAvailableTabs1 = new ArrayList<>();
-		listAvailableTabs1.add("MainWindowSellers");
-		ArrayList<String> listAvailableTabs2 = new ArrayList<>();
-		listAvailableTabs2.add("MainWindowSellers");
-		ArrayList<String> listAvailableTabs3 = new ArrayList<>();
-		accessRights.put(NameRole.Administrator, new ArrayList<>(listAvailableTabs1));
-		accessRights.put(NameRole.Seller, new ArrayList<>(listAvailableTabs2));
-		accessRights.put(NameRole.Manager, new ArrayList<>(listAvailableTabs3));
+		accessRights = new HashMap<>();
+		ArrayList<String> listAvailableTabsAdministrator = new ArrayList<>();
+		listAvailableTabsAdministrator.add("MainWindowSellers");
+		listAvailableTabsAdministrator.add("MainWindowOrders");
+		listAvailableTabsAdministrator.add("MainWindowAccounting");
+		listAvailableTabsAdministrator.add("MainWindowProductRequest");
+		listAvailableTabsAdministrator.add("MainWindowReports");
+		ArrayList<String> listAvailableTabsSeller = new ArrayList<>();
+		listAvailableTabsSeller.add("MainWindowSellers");
+		listAvailableTabsSeller.add("MainWindowProductRequest");
+		listAvailableTabsSeller.add("MainWindowAccounting");
+		ArrayList<String> listAvailableTabsManager = new ArrayList<>();
+		listAvailableTabsManager.add("MainWindowOrders");
+		listAvailableTabsManager.add("MainWindowAccounting");
+		listAvailableTabsManager.add("MainWindowProductRequest");
+		accessRights.put(NameRole.Administrator, new ArrayList<>(listAvailableTabsAdministrator));
+		accessRights.put(NameRole.Seller, new ArrayList<>(listAvailableTabsSeller));
+		accessRights.put(NameRole.Manager, new ArrayList<>(listAvailableTabsManager));
+	}
+
+	private void showAccessLevelErrorWindow() {
+		Stage onTop = new Stage();
+		onTop.initOwner(getStage().getScene().getWindow());
+		onTop.initModality(Modality.WINDOW_MODAL);
+		onTop.setTitle("Access rights error");
+		onTop.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+		FXMLLoader loader = new FXMLLoader ();
+		loader.setLocation (getClass ().getResource ("/AccessLevelError.fxml"));
+		try {
+			loader.load ();
+		} catch (IOException e) {
+			e.printStackTrace ();
+		}
+		onTop.setOnCloseRequest (new EventHandler<WindowEvent>() {
+			@Override
+			public void handle (WindowEvent event) {
+				event.consume ();
+			}
+		});
+		AccessLevelErrorController accessLevelErrorController = loader.getController();
+		accessLevelErrorController.setStage(onTop);
+		Parent root = loader.getRoot();
+		Scene scene = new Scene (root);
+		scene.getStylesheets().add(Objects.requireNonNull(
+				getClass().getResource("/application.css")).toExternalForm());
+		onTop.setScene (scene);
+		onTop.show();
 	}
 
 }

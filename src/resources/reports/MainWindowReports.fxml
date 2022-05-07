@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.reports.MainWindowReportsController">
+    <children>
+        <Button fx:id="cancelButton" layoutX="664.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" text="Назад">
+            <font>
+                <Font name="Georgia Italic" size="14.0" />
+            </font>
+        </Button>
+      <Pane layoutX="20.0" layoutY="40.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report1Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 1">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить перечень и общее число поставщиков, поставляющих указанный вид товара, либо некоторый товар в объеме, не менее заданного за  указанный период." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="290.0" layoutY="40.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report2Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 2">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить перечень и общее число покупателей, купивших указанный вид товара за некоторый период, либо сделавших покупку товара в объеме, не менее заданного." wrappingWidth="229.49588012695312">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="560.0" layoutY="40.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report3Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 3">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить номенклатуру и объем товаров в указанной торговой точке." wrappingWidth="243.90200805664062">
+               <font>
+                  <Font name="Baghdad Regular" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="155.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report4Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 4">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить сведения об объеме и ценах на указанный товар по всем торговым точкам, по торговым точкам заданного типа, по конкретной торговой точке." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="270.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report7Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 7">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные об объеме продаж указанного товара за некоторый период по всем торговым точкам, по заданного типа, по конкретной торговой точке." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="385.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report10Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 10">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные об отношении объема продаж к объему торговых площадей, либо к числу прилавков по торговым точкам указанного типа, о выработке продавца." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="500.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report13Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 13">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="5.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить сведения о покупателях указанного товара за обозначенный период по всем торговым точкам, по торговым точкам указанного типа, по данной торговой точке." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="290.0" layoutY="155.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report5Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 5">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные о выработке на одного продавца за указанный период по всем торговым точкам, по торговым точкам заданного типа." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="560.0" layoutY="155.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report6Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 6">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные о выработке отдельно взятого продавца отдельно взятой торговой точки за указанный период." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="290.0" layoutY="270.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report8Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 8">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные о заработной плате продавцов по всем торговым точкам, по торговым точкам заданного типа, по конкретной торговой точке." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="560.0" layoutY="270.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report9Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 9">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить сведения о поставках определенного товара указанным поставщиком за все время поставок, либо за некоторый период." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="290.0" layoutY="385.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report11Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 11">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные о рентабельности торговой точки: соотношение объема продаж к накладным расходам за указанный период." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="560.0" layoutY="385.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report12Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 12">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить сведения о поставках товаров по указанному номеру заказа." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="290.0" layoutY="500.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report14Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 14">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить сведения о наиболее активных покупателях по всем торговым точкам, по торговым точкам указанного типа, по данной торговой точке." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="560.0" layoutY="500.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Button fx:id="report15Button" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отчёт 15">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="6.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Получить данные о товарообороте торговой точки, либо всех торговых определенной группы за указанный период." wrappingWidth="238.75289916992188">
+               <font>
+                  <Font name="Bodoni 72 Book" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

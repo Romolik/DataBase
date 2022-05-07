@@ -55,8 +55,8 @@ public class ChooseRoleController extends MainWindowController {
 		nextButton.setOnAction(event -> {
 			if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(),
 							   "Администратор") && Objects.equals(loginTextField.getText(),
-																  "admin") && Objects.equals(passwordTextField.getText(), "admin")) {
-				loadChooseRoleController(NameRole.Administrator);
+								"admin") && Objects.equals(passwordTextField.getText(), "admin")) {
+						loadMainMenuWindow(NameRole.Administrator);
 			} else if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(),
 									  "Продавец")) {
 				try {
@@ -64,7 +64,7 @@ public class ChooseRoleController extends MainWindowController {
 					ResultSet rs = s.executeQuery("SELECT * FROM Users where Login = '" +
 												  loginTextField.getText() + "'");
 					if (rs.next() && rs.getString(3).equals(passwordTextField.getText())) {
-						loadChooseRoleController(NameRole.Seller);
+						loadMainMenuWindow(NameRole.Seller);
 					}
 				} catch (SQLException e) {
 					e.printStackTrace();
@@ -76,7 +76,7 @@ public class ChooseRoleController extends MainWindowController {
 					ResultSet rs = s.executeQuery("SELECT * FROM Users where Login = '" +
 												  loginTextField.getText() + "'");
 					if (rs.next() && rs.getString(3).equals(passwordTextField.getText())) {
-						loadChooseRoleController(NameRole.Manager);
+						loadMainMenuWindow(NameRole.Manager);
 					}
 				} catch (SQLException e) {
 					e.printStackTrace();
@@ -104,19 +104,4 @@ public class ChooseRoleController extends MainWindowController {
 											 manager.getText(), supplier.getText());
 	}
 
-	private void loadChooseRoleController(NameRole nameRole) {
-		FXMLLoader loader = new FXMLLoader ();
-		loader.setLocation (getClass ().getResource ("/MainMenuWindow.fxml"));
-		try {
-			loader.load ();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		MainMenuWindowController mainMenuWindowController = loader.getController();
-		mainMenuWindowController.setNameRole(nameRole);
-		mainMenuWindowController.setRoleLabel();
-		mainMenuWindowController.setStage(getStage());
-		mainMenuWindowController.setConnection(getConnection());
-		showStage(loader);
-	}
 }

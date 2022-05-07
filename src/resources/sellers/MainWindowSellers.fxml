@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="main.java.ru.nsu.shchiptsov.sellers.MainWindowSellersController"
-            prefHeight="600.0" prefWidth="800.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.sellers.MainWindowSellersController">
+   <children>
+      <Button fx:id="cancelButton" layoutX="674.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" text="Назад">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

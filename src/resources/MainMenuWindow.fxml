@@ -23,14 +23,14 @@
             <Font name="Georgia Italic" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="225.0" layoutY="8.0" text="База данных торговых организаций">
+      <Label layoutX="225.0" layoutY="10.0" text="База данных торговых организаций">
          <font>
             <Font name="Georgia Bold Italic" size="20.0" />
          </font>
       </Label>
-      <Pane layoutX="30.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(132, 145, 47);">
+      <Pane layoutX="30.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Продажа и учёт товаров">
+            <Label layoutX="20.0" layoutY="5.0" text="Продажа товаров">
                <font>
                   <Font name="Georgia Italic" size="14.0" />
                </font>
@@ -42,7 +42,7 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="437.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(132, 145, 47);">
+      <Pane layoutX="440.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
          <children>
             <Label layoutX="20.0" layoutY="5.0" text="Заказы">
                <font>
@@ -50,6 +50,48 @@
                </font>
             </Label>
             <Button fx:id="ordersButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="35.0" layoutY="225.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" text="Товарный учёт">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="accountingButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="440.0" layoutY="225.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" text="Заявки на поставку товара">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="requestButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="35.0" layoutY="390.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+         <children>
+            <Label layoutX="20.0" layoutY="5.0" text="Отчёты">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="reportsButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
                <font>
                   <Font name="Georgia Italic" size="14.0" />
                </font>
