@@ -56,27 +56,28 @@ public class ChooseRoleController extends MainWindowController {
 			if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(),
 							   "Администратор") && Objects.equals(loginTextField.getText(),
 								"admin") && Objects.equals(passwordTextField.getText(), "admin")) {
-						loadMainMenuWindow(NameRole.Administrator);
+						loadMainMenuWindow(NameRole.Administrator, 0);
 			} else if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(),
 									  "Продавец")) {
 				try {
 					Statement s = getConnection().createStatement();
 					ResultSet rs = s.executeQuery("SELECT * FROM Users where Login = '" +
 												  loginTextField.getText() + "'");
-					if (rs.next() && rs.getString(3).equals(passwordTextField.getText())) {
-						loadMainMenuWindow(NameRole.Seller);
+					if (rs.next() && rs.getString("password").equals(passwordTextField.getText()) &&
+						rs.getString("Role").equals("seller")) {
+						loadMainMenuWindow(NameRole.Seller, Integer.parseInt(loginTextField.getText()));
 					}
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
-			} else if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(),
-									  "Менеджер")) {
+			} else if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(), "Менеджер")) {
 				try {
 					Statement s = getConnection().createStatement();
 					ResultSet rs = s.executeQuery("SELECT * FROM Users where Login = '" +
 												  loginTextField.getText() + "'");
-					if (rs.next() && rs.getString(3).equals(passwordTextField.getText())) {
-						loadMainMenuWindow(NameRole.Manager);
+					if (rs.next() && rs.getString("password").equals(passwordTextField.getText()) &&
+						rs.getString("Role").equals("manager")) {
+						loadMainMenuWindow(NameRole.Manager, Integer.parseInt(loginTextField.getText()));
 					}
 				} catch (SQLException e) {
 					e.printStackTrace();

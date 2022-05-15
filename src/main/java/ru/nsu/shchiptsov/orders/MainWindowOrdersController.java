@@ -14,7 +14,8 @@ public class MainWindowOrdersController extends MainWindowController {
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		cancelButton.setOnAction(event -> {
-			loadMainMenuWindow(getNameRole());
+			loadMainMenuWindow(getNameRole(), getIdEmployee());
 		});
 	}
+
 }

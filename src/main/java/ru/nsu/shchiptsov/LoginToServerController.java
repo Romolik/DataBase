@@ -68,7 +68,7 @@ public class LoginToServerController extends MainWindowController {
 	private void loginServer() {
 		try {
 			setConnection(DriverManager.getConnection(url, user, pwd));
-			//executeScriptInitializeDB();
+			executeScriptInitializeDB();
 			getConnection().setAutoCommit(false);
 		} catch (SQLException e) {
 			System.out.println("Connection Failed : " + e.getMessage());

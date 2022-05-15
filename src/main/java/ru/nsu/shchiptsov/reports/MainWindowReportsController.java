@@ -55,7 +55,7 @@ public class MainWindowReportsController extends MainWindowController {
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		cancelButton.setOnAction(event -> {
-			loadMainMenuWindow(getNameRole());
+			loadMainMenuWindow(getNameRole(), getIdEmployee());
 		});
 		report1Button.setOnAction(event -> {
 			loadReportWindow("1");

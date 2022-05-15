@@ -14,6 +14,7 @@ public abstract class MainWindowController implements Initializable {
 	private Stage stage;
 	private Connection connection = null;
 	private ChooseRoleController.NameRole nameRole;
+	private Integer idEmployee;
 
 	public void setNameRole(ChooseRoleController.NameRole nameRole) {
 		this.nameRole = nameRole;
@@ -59,11 +60,21 @@ public abstract class MainWindowController implements Initializable {
 		MainWindowController mainWindowController = loader.getController();
 		mainWindowController.setNameRole(getNameRole());
 		mainWindowController.setStage(getStage());
+		mainWindowController.setIdEmployee(getIdEmployee());
 		mainWindowController.setConnection(getConnection());
 		showStage(loader);
 	}
 
-	protected void loadMainMenuWindow(ChooseRoleController.NameRole nameRole) {
+	public Integer getIdEmployee() {
+		return idEmployee;
+	}
+
+	public void setIdEmployee(Integer idEmployee) {
+		this.idEmployee = idEmployee;
+	}
+
+
+	protected void loadMainMenuWindow(ChooseRoleController.NameRole nameRole, Integer id) {
 		FXMLLoader loader = new FXMLLoader ();
 		loader.setLocation (getClass ().getResource ("/MainMenuWindow.fxml"));
 		try {
@@ -75,6 +86,7 @@ public abstract class MainWindowController implements Initializable {
 		mainMenuWindowController.setNameRole(nameRole);
 		mainMenuWindowController.setRoleLabel();
 		mainMenuWindowController.setStage(getStage());
+		mainMenuWindowController.setIdEmployee(id);
 		mainMenuWindowController.setConnection(getConnection());
 		showStage(loader);
 	}

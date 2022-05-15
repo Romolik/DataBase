@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.orders.MainWindowOrdersController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.orders.MainWindowOrdersController">
    <children>
       <Button fx:id="cancelButton" layoutX="664.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" text="Назад">
          <font>
             <Font name="Georgia Italic" size="14.0" />
          </font>
       </Button>
+      <DatePicker fx:id="dateSale" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" />
+      <Label layoutX="20.0" layoutY="25.0" text="Дата продажи">
+         <font>
+            <Font name="Georgia Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="210.0" layoutY="50.0" prefHeight="30.0" prefWidth="130.0" promptText="Артикул товара" />
    </children>
 </AnchorPane>

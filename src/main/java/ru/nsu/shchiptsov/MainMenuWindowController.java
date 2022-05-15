@@ -94,7 +94,7 @@ public class MainMenuWindowController extends MainWindowController {
 		accessRights = new HashMap<>();
 		ArrayList<String> listAvailableTabsAdministrator = new ArrayList<>();
 		listAvailableTabsAdministrator.add("MainWindowSellers");
-		listAvailableTabsAdministrator.add("MainWindowOrders");
+		//listAvailableTabsAdministrator.add("MainWindowOrders");
 		listAvailableTabsAdministrator.add("MainWindowAccounting");
 		listAvailableTabsAdministrator.add("MainWindowProductRequest");
 		listAvailableTabsAdministrator.add("MainWindowReports");

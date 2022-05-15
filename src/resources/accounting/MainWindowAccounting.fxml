@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.accounting.MainWindowAccountingController">
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.accounting.MainWindowAccountingController">
     <children>
-        <Button fx:id="cancelButton" layoutX="674.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" text="Назад">
+        <Button fx:id="cancelButton" layoutX="670.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Назад">
             <font>
                 <Font name="Georgia Italic" size="14.0" />
             </font>
         </Button>
+      <Button fx:id="changePriceButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Изменить цену">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="transferProductButton" layoutX="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Передать товар">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="assortmentButton" layoutX="300.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Ассортимент">
+         <font>
+            <Font name="Georgia Italic" size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

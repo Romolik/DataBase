@@ -15,8 +15,8 @@ public class DatabaseFields {
 	private String idInvoice;
 	private Date date;
 	private String idCompositionOfInvoice;
-	private String idPointOfSale;
-	private String idProduct;
+	private Integer idPointOfSale;
+	private Integer idProduct;
 	private String idSupplier;
 	private Double cost;
 	private String idTypePointOfSale;
@@ -235,19 +235,19 @@ public class DatabaseFields {
 		this.idCompositionOfInvoice = idCompositionOfInvoice;
 	}
 
-	public String getIdPointOfSale() {
+	public Integer getIdPointOfSale() {
 		return idPointOfSale;
 	}
 
-	public void setIdPointOfSale(String idPointOfSale) {
+	public void setIdPointOfSale(Integer idPointOfSale) {
 		this.idPointOfSale = idPointOfSale;
 	}
 
-	public String getIdProduct() {
+	public Integer getIdProduct() {
 		return idProduct;
 	}
 
-	public void setIdProduct(String idProduct) {
+	public void setIdProduct(Integer idProduct) {
 		this.idProduct = idProduct;
 	}
 

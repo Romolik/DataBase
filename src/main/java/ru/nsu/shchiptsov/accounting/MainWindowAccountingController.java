@@ -10,11 +10,27 @@ import java.util.ResourceBundle;
 public class MainWindowAccountingController extends MainWindowController {
 	@FXML
 	private Button cancelButton;
+	@FXML
+	private Button changePriceButton;
+	@FXML
+	private Button transferProductButton;
+	@FXML
+	private Button assortmentButton;
+
 
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		cancelButton.setOnAction(event -> {
-			loadMainMenuWindow(getNameRole());
+			loadMainMenuWindow(getNameRole(), getIdEmployee());
+		});
+		assortmentButton.setOnAction(event -> {
+			
+		});
+		changePriceButton.setOnAction(event -> {
+
+		});
+		transferProductButton.setOnAction(event -> {
+
 		});
 	}
 }
