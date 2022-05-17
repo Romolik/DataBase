@@ -27,7 +27,7 @@ public class DatabaseFields {
 	private Double rentalPrice;
 	private Double utilities;
 	private String namePost;
-	private String idTypeProduct;
+	private Integer idTypeProduct;
 	private String articleNumber;
 	private Integer numberOfPieces;
 	private Double quantity;
@@ -331,11 +331,11 @@ public class DatabaseFields {
 		this.namePost = namePost;
 	}
 
-	public String getIdTypeProduct() {
+	public Integer getIdTypeProduct() {
 		return idTypeProduct;
 	}
 
-	public void setIdTypeProduct(String idTypeProduct) {
+	public void setIdTypeProduct(Integer idTypeProduct) {
 		this.idTypeProduct = idTypeProduct;
 	}
 

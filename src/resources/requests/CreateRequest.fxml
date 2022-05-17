@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.requests.CreateRequestController">
+    <children>
+        <Button fx:id="addButton1" layoutX="15.0" layoutY="120.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" text="Добавить">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="155.0" layoutY="170.0" mnemonicParsing="false" text="Выйти">
+            <font>
+                <Font name="Georgia Italic" size="19.0" />
+            </font>
+        </Button>
+        <TextField fx:id="articulProductTextField" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" promptText="Артикул товара">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font></TextField>
+        <TextField fx:id="numberPieceTextField" layoutX="15.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" promptText="Кол-во(шт)">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="quntityTextField" layoutX="230.0" layoutY="70.0" prefHeight="30.0" prefWidth="150.0" promptText="Масса(г)">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </TextField>
+        <Button fx:id="addButton2" layoutX="230.0" layoutY="120.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" text="Добавить">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

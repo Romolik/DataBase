@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.requests.AddSupplierController">
+    <children>
+        <Button fx:id="addButton" layoutX="230.0" layoutY="50.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" text="Добавить">
+            <font>
+                <Font name="Georgia Italic" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="155.0" layoutY="150.0" mnemonicParsing="false" text="Выйти">
+            <font>
+                <Font name="Georgia Italic" size="19.0" />
+            </font>
+        </Button>
+      <TextField fx:id="nameSupplierTextField" layoutX="15.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

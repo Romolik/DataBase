@@ -17,12 +17,32 @@
             <Font name="Georgia Bold Italic" size="26.0" />
          </font>
       </Label>
-      <Button fx:id="createRequest" layoutX="130.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="230.0" text="Создать заявку">
+      <Button fx:id="createRequestButton" layoutX="70.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="250.0" text="Создать заявку">
          <font>
             <Font name="Georgia Italic" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="530.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="230.0" text="Просмотреть заявки">
+      <Button fx:id="viewRequestButton" layoutX="530.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="230.0" text="Просмотреть заявки">
+         <font>
+            <Font name="Georgia Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="addTypeProductButton" layoutX="70.0" layoutY="200.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="250.0" text="Добавить тип товара">
+         <font>
+            <Font name="Georgia Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="addSupplierProductButton" layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="Добавить товары поставщика">
+         <font>
+            <Font name="Georgia Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="addSupplierButton" layoutX="70.0" layoutY="320.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="250.0" text="Добавить поставщика">
+         <font>
+            <Font name="Georgia Italic" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeSupplierButton" layoutX="360.0" layoutY="320.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="250.0" text="Удалить поставщика">
          <font>
             <Font name="Georgia Italic" size="19.0" />
          </font>
