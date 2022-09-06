@@ -82,6 +82,22 @@ public class ChooseRoleController extends MainWindowController {
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
+			} else if (Objects.equals(chooseRoleComboBox.getSelectionModel().getSelectedItem(), "Поставщик")) {
+				try {
+					Statement s = getConnection().createStatement();
+					ResultSet rs = s.executeQuery("SELECT * FROM Users where Login = '" +
+												  loginTextField.getText() + "'");
+					if (rs.next() && rs.getString("password").equals(passwordTextField.getText()) &&
+						rs.getString("Role").equals("supplier")) {
+						rs = s.executeQuery("select ID_SUPPLIER from supplier where NAME_SUPPLIER = '" +
+									   loginTextField.getText() + "'");
+						if (rs.next()) {
+							loadMainMenuWindow(NameRole.Supplier, rs.getInt("ID_SUPPLIER"));
+						}
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
 			errorLoginLabel.setText("Login or password incorrect");
 		});

@@ -62,6 +62,7 @@ public abstract class MainWindowController implements Initializable {
 		mainWindowController.setStage(getStage());
 		mainWindowController.setIdEmployee(getIdEmployee());
 		mainWindowController.setConnection(getConnection());
+		mainWindowController.initializeInitialState();
 		showStage(loader);
 	}
 
@@ -90,5 +91,7 @@ public abstract class MainWindowController implements Initializable {
 		mainMenuWindowController.setConnection(getConnection());
 		showStage(loader);
 	}
+
+	public void initializeInitialState() {}
 
 }

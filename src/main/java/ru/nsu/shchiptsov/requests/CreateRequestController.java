@@ -63,10 +63,14 @@ public class CreateRequestController extends MainWindowProductRequestController 
 			String idProduct = rs.getString("ID_PRODUCT");
 			String request;
 			if (piece) {
-				request = "Insert into Request values (Null, " + idPointOfSale + ", " +
-						idProduct + ", " + volume + ", 0, 'Considered')";
+				request = "Insert into Request(ID_Request, ID_Point_of_Sale," +
+						  " ID_Product,Number_of_Pieces, \"Quantity(weight_in_grams)\"," +
+						  "Status) values (Null, " + idPointOfSale + ", " +
+						  idProduct + ", " + volume + ", 0, 'Considered')";
 			} else {
-				request = "Insert into Request values (Null, " + idPointOfSale + ", " +
+				request = "Insert into Request(ID_Request, ID_Point_of_Sale," +
+						  " ID_Product,Number_of_Pieces, \"Quantity(weight_in_grams)\"," +
+						  "Status) values (Null, " + idPointOfSale + ", " +
 						  idProduct + ", 0," + volume + "'Considered')";
 			}
 			s.executeQuery(request);

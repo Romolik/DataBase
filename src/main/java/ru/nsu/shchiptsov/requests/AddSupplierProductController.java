@@ -71,7 +71,7 @@ public class AddSupplierProductController extends MainWindowProductRequestContro
 		String nameProduct = nameProductTextField.getText();
 		String typeProduct = (String) typeProductChoiceBox.getSelectionModel().getSelectedItem();
 		String nameSupplier = (String) nameSupplierChoiceBox.getSelectionModel().getSelectedItem();
-		if (articul.equals("") || nameProduct.equals("")  || typeProductChoiceBox.getSelectionModel().isEmpty() ||
+		if (nameProduct.equals("")  || typeProductChoiceBox.getSelectionModel().isEmpty() ||
 			nameSupplierChoiceBox.getSelectionModel().isEmpty()) {
 			return;
 		}
@@ -85,32 +85,42 @@ public class AddSupplierProductController extends MainWindowProductRequestContro
 			rs.next();
 			typeProduct = rs.getString("ID_TYPE_PRODUCT");
 			boolean update = false;
-			if (s.executeQuery("Select * from Product_Supplier where NAME_PRODUCT = '" +
-							  nameProduct + "'").next()) {
+			if (s.executeQuery("Select * from Product_Supplier where Article_Number = " +
+							  articul).next()) {
 				update = true;
+			}
+			if (update && articul.equals("")) {
+				return;
 			}
 			String request;
 			if (piece) {
 				if (!update) {
-					request = "Insert into Product_Supplier values (Null, " +
+					request = "Insert into Product_Supplier(ID_Product_Supplier,ID_Type_Product," +
+							  "ID_Supplier,Name_Product,\n" +
+							  " Number_of_Pieces,\"Quantity(weight_in_grams)\",\n" +
+							  " \"Сost per piece\",\"Cost per 100g\")" +
+							  " values (Null, " +
 							  typeProduct + ", " +
 							  idSupplier + ", '" + nameProduct + "', " +
 							  volume + ", 0, " + cost + ", 0)";
 				} else {
 					request = "UPDATE Product_Supplier set ID_TYPE_PRODUCT = " + typeProduct + "," +
 							  " ID_SUPPLIER = " + idSupplier + ", NUMBER_OF_PIECES = " + volume + ", " +
-							  "\"Сost per piece\" = " + cost;
+							  "\"Сost per piece\" = " + cost + " where Article_Number = " + articul;
 				}
 			} else {
 				if (!update) {
-					request = "Insert into Product_Supplier values (Null, " +
+					request = "Insert into Product_Supplier(ID_Product_Supplier,ID_Type_Product," +
+							  "ID_Supplier,Name_Product,\n" +
+							  "Number_of_Pieces,\"Quantity(weight_in_grams)\",\n" +
+							  "\"Сost per piece\",\"Cost per 100g\") values (Null, " +
 							  typeProduct + ", " +
 							  idSupplier + ", '" + nameProduct + "', 0, " +
 							  volume + ", 0, " + cost + ")";
 				} else {
 					request = "UPDATE Product_Supplier set ID_TYPE_PRODUCT = " + typeProduct + "," +
 							  " ID_SUPPLIER = " + idSupplier + ", \"Quantity(weight_in_grams)\" = " + volume + ", " +
-							  "\"Cost per 100g\" = " + cost;
+							  "\"Cost per 100g\" = " + cost + " where Article_Number = " + articul;
 				}
 			}
 			s.executeQuery(request);
@@ -124,8 +134,7 @@ public class AddSupplierProductController extends MainWindowProductRequestContro
 	public void initializeInitialState() {
 		try {
 			s = getConnection().createStatement();
-			ResultSet
-					rs = s.executeQuery("SELECT * FROM Supplier where Active = 1");
+			ResultSet rs = s.executeQuery("SELECT * FROM Supplier where Active = 1");
 			ArrayList<String> listNameSupplier = new ArrayList<>();
 			while (rs.next()) {
 				listNameSupplier.add(rs.getString("NAME_SUPPLIER"));

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.ChooseRoleController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.ChooseRoleController">
    <children>
       <ComboBox fx:id="chooseRoleComboBox" layoutX="180.0" layoutY="40.0" prefHeight="80.0" prefWidth="240.0" promptText="Выбор роли" />
       <TextField fx:id="loginTextField" layoutX="180.0" layoutY="180.0" prefHeight="30.0" prefWidth="240.0" promptText="Введите логин:">
@@ -22,12 +22,12 @@
       </TextField>
       <Button fx:id="nextButton" layoutX="180.0" layoutY="280.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="240.0" text="Далее">
          <font>
-            <Font name="Georgia Italic" size="14.0" />
+            <Font name="Rockwell" size="14.0" />
          </font>
       </Button>
       <Button fx:id="cancelButton" layoutX="180.0" layoutY="340.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="240.0" text="Назад">
          <font>
-            <Font name="Georgia Italic" size="14.0" />
+            <Font name="Rockwell" size="14.0" />
          </font>
       </Button>
       <Label fx:id="errorLoginLabel" layoutX="180.0" layoutY="132.0">

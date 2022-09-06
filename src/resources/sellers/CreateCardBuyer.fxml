@@ -9,22 +9,22 @@
     <children>
         <Button fx:id="createButton" layoutX="15.0" layoutY="130.0" mnemonicParsing="false" text="Создать">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
       <TextField fx:id="firstNameTextField" layoutX="15.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" promptText="Имя покупателя">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </TextField>
       <TextField fx:id="lastNameTextField" layoutX="15.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" promptText="Фамилия покупателя">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </TextField>
       <Button fx:id="exitButton" layoutX="250.0" layoutY="130.0" mnemonicParsing="false" text="Выйти">
          <font>
-            <Font name="Georgia Italic" size="19.0" />
+            <Font name="Rockwell" size="18.0" />
          </font>
       </Button>
     </children>

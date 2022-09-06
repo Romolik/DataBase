@@ -10,21 +10,21 @@
     <children>
         <Button fx:id="addButton" layoutX="230.0" layoutY="70.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" text="Добавить">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
         <Button fx:id="exitButton" layoutX="155.0" layoutY="150.0" mnemonicParsing="false" text="Выйти">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
-        <TextField fx:id="articulProductTextField" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" promptText="Артикул">
+        <TextField fx:id="articulProductTextField" layoutX="15.0" layoutY="20.0" prefHeight="30.0" prefWidth="200.0" promptText="Артикль">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font></TextField>
       <TextField fx:id="nameProductTextField" layoutX="15.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" promptText="Название продукта">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </TextField>
       <ChoiceBox fx:id="typeProductChoiceBox" layoutX="230.0" layoutY="20.0" prefHeight="30.0" prefWidth="150.0" />

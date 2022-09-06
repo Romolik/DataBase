@@ -10,38 +10,38 @@
     <children>
         <Button fx:id="changeButton1" layoutX="220.0" layoutY="60.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" text="Изменить">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
         <TextField fx:id="articulProductTextField" layoutX="15.0" layoutY="15.0" prefHeight="30.0" prefWidth="200.0" promptText="Артикль товара">
             <font>
-                <Font name="Georgia Italic" size="13.0" />
+                <Font name="Rockwell" size="13.0" />
             </font>
         </TextField>
         <TextField fx:id="volumePieceTextField" layoutX="15.0" layoutY="60.0" prefHeight="30.0" prefWidth="200.0" promptText="Количество товара(шт)">
             <font>
-                <Font name="Georgia Italic" size="13.0" />
+                <Font name="Rockwell" size="13.0" />
             </font>
         </TextField>
         <Button fx:id="exitButton" layoutX="250.0" layoutY="150.0" mnemonicParsing="false" text="Выйти">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
         <TextField fx:id="volume100gTextField" layoutX="15.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Количество товара(г)">
             <font>
-                <Font name="Georgia Italic" size="13.0" />
+                <Font name="Rockwell" size="13.0" />
             </font>
         </TextField>
         <Button fx:id="changeButton2" layoutX="220.0" layoutY="105.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" text="Изменить">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
       <ChoiceBox fx:id="choiceBox" layoutX="220.0" layoutY="15.0" prefHeight="30.0" prefWidth="150.0" />
       <TextField fx:id="newArticulProductTextField" layoutX="15.0" layoutY="150.0" prefHeight="30.0" prefWidth="230.0" promptText="Новый артикль(Необязательно)">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="12.0" />
          </font>
       </TextField>
     </children>

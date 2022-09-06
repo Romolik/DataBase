@@ -12,37 +12,37 @@
    <children>
       <Button fx:id="exitButton" layoutX="538.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Выход">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </Button>
       <Button fx:id="findButton" layoutX="450.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Поиск">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </Button>
       <Label layoutY="50.0" text="Выберите название торговой точки">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="12.0" />
          </font>
       </Label>
       <Label layoutY="35.0" text="(Необязательно)">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="12.0" />
          </font>
       </Label>
       <ChoiceBox fx:id="nameChoiceBox" layoutY="70.0" prefHeight="30.0" prefWidth="240.0" />
       <Label layoutX="260.0" layoutY="40.0" text="(Необязательно)">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="12.0" />
          </font>
       </Label>
       <Label layoutX="260.0" layoutY="55.0" text="Выберите тип ТТ">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="12.0" />
          </font>
       </Label>
       <ChoiceBox fx:id="typeChoiceBox" layoutX="260.0" layoutY="70.0" prefHeight="30.0" prefWidth="150.0" />
-      <TableView fx:id="mainTableView" layoutY="100.0" prefHeight="320.0" prefWidth="610.0">
+      <TableView fx:id="mainTableView" layoutY="100.0" prefHeight="320.0" prefWidth="610.0" style="-fx-base: rgb(132,203,220);">
          <columns>
             <TableColumn fx:id="column1" minWidth="150.0" prefWidth="150.0" />
             <TableColumn fx:id="column2" minWidth="150.0" prefWidth="150.0" />

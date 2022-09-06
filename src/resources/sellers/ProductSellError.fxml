@@ -10,17 +10,17 @@
     <children>
         <Label layoutX="114.0" layoutY="8.0" text="Ошибка!">
             <font>
-                <Font name="Georgia Bold Italic" size="36.0" />
+                <Font name="Rockwell" size="36.0" />
             </font>
         </Label>
         <Text layoutX="16.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нельзя продать данный товар" wrappingWidth="368.6064453125">
             <font>
-                <Font name="Georgia Italic" size="25.0" />
+                <Font name="Rockwell" size="25.0" />
             </font>
         </Text>
         <Button fx:id="okButton" layoutX="175.0" layoutY="163.0" mnemonicParsing="false" text="Ок">
             <font>
-                <Font name="Georgia Italic" size="19.0" />
+                <Font name="Rockwell" size="18.0" />
             </font>
         </Button>
     </children>

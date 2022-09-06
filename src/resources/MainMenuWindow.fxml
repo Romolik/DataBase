@@ -10,7 +10,7 @@
    <children>
       <Label layoutX="14.0" layoutY="6.0" text="Вы  вошли как:">
          <font>
-            <Font name="Georgia Italic" size="14.0" />
+            <Font name="Rockwell" size="14.0" />
          </font>
       </Label>
       <Label fx:id="roleLabel" layoutX="14.0" layoutY="35.0">
@@ -20,80 +20,94 @@
       </Label>
       <Button fx:id="cancelButton" layoutX="654.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" text="Назад">
          <font>
-            <Font name="Georgia Italic" size="14.0" />
+            <Font name="Rockwell" size="14.0" />
          </font>
       </Button>
       <Label layoutX="225.0" layoutY="10.0" text="База данных торговых организаций">
          <font>
-            <Font name="Georgia Bold Italic" size="20.0" />
+            <Font name="Rockwell" size="20.0" />
          </font>
       </Label>
-      <Pane layoutX="30.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="30.0" layoutY="60.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Продажа товаров">
+            <Label layoutX="55.0" layoutY="31.0" text="Продажа товаров" textFill="WHITE">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="sellersButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+            <Button fx:id="sellersButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="14.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="440.0" layoutY="60.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="420.0" layoutY="60.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Заказы">
+            <Label alignment="CENTER" layoutX="37.0" layoutY="27.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="44.0" prefWidth="257.0" text="Заказы" textFill="WHITE">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="ordersButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+            <Button fx:id="ordersButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="14.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="35.0" layoutY="225.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="30.0" layoutY="225.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Товарный учёт">
+            <Label layoutX="70.0" layoutY="31.0" text="Товарный учёт" textFill="WHITE">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="accountingButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+            <Button fx:id="accountingButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="14.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="440.0" layoutY="225.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="420.0" layoutY="225.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Заявки на поставку товара">
+            <Label layoutX="38.0" layoutY="33.0" text="Заявки на поставку товара" textFill="WHITE">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="requestButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+            <Button fx:id="requestButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="14.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="35.0" layoutY="390.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="30.0" layoutY="390.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
          <children>
-            <Label layoutX="20.0" layoutY="5.0" text="Отчёты">
+            <Label layoutX="116.0" layoutY="31.0" text="Отчёты" textFill="WHITE">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="reportsButton" layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Открыть">
+            <Button fx:id="reportsButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
                <font>
-                  <Font name="Georgia Italic" size="14.0" />
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="420.0" layoutY="390.0" prefHeight="130.0" prefWidth="330.0" style="-fx-background-color: rgb(132,203,220);">
+         <children>
+            <Label layoutX="18.0" layoutY="33.0" text="Создание нового пользователя" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="createUsersButton" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="330.0" text="Открыть">
+               <font>
+                  <Font name="Rockwell" size="14.0" />
                </font>
             </Button>
          </children>

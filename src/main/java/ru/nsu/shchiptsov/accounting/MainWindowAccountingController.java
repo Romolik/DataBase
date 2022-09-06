@@ -131,7 +131,7 @@ public class MainWindowAccountingController extends MainWindowController {
 			Stage onTop = new Stage();
 			onTop.initOwner(getStage().getScene().getWindow());
 			onTop.initModality(Modality.WINDOW_MODAL);
-			onTop.setTitle("Change price");
+			onTop.setTitle("Transfer product");
 			onTop.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
 			FXMLLoader loader = new FXMLLoader ();
 			loader.setLocation (getClass ().getResource ("/accounting/TransferProduct.fxml"));
@@ -164,7 +164,7 @@ public class MainWindowAccountingController extends MainWindowController {
 			Stage onTop = new Stage();
 			onTop.initOwner(getStage().getScene().getWindow());
 			onTop.initModality(Modality.WINDOW_MODAL);
-			onTop.setTitle("Change price");
+			onTop.setTitle("Add articul");
 			onTop.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
 			FXMLLoader loader = new FXMLLoader ();
 			loader.setLocation (getClass ().getResource ("/accounting/AddArticulProduct.fxml"));
@@ -220,7 +220,7 @@ public class MainWindowAccountingController extends MainWindowController {
 		}
 	}
 
-	private void initializeInitialState() {
+	public void initializeInitialState() {
 		nameProduct.setPrefWidth(133);
 		articleNumber.setPrefWidth(133);
 		numberOfPieces.setPrefWidth(133);

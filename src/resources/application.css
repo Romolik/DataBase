@@ -1,6 +1,6 @@
 .root{
     -fx-font-size: 14pt;
-    -fx-font-family: "Georgia";
-    -fx-base: rgb(0, 71, 171);
-    -fx-background: rgb(255, 176, 46);
+    -fx-font-family: "Rockwell";
+    -fx-base: rgb(34,77,108);
+    -fx-background: rgb(241,241,241);
 }

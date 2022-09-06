@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.reports.WindowReport12Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.reports.WindowReport12Controller">
    <children>
       <Button fx:id="exitButton" layoutX="530.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Выход">
          <font>
-            <Font name="Georgia Italic" size="13.0" />
+            <Font name="Rockwell" size="13.0" />
          </font>
       </Button>
+      <TextField fx:id="numberOrderTextField" layoutX="20.0" layoutY="60.0" prefHeight="30.0" prefWidth="200.0" promptText="Номер заказа" />
+      <Button fx:id="findButton" layoutX="290.0" layoutY="60.0" mnemonicParsing="false" prefHeight="30.0" text="Поиск" />
+      <TableView fx:id="mainTableView" layoutY="100.0" prefHeight="300.0" prefWidth="600.0" style="-fx-base: rgb(132,203,220);">
+        <columns>
+          <TableColumn prefWidth="75.0" />
+          <TableColumn prefWidth="75.0" />
+            <TableColumn prefWidth="75.0" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -38,6 +38,8 @@ public class MainMenuWindowController extends MainWindowController {
 	private Button requestButton;
 	@FXML
 	private Button reportsButton;
+	@FXML
+	private Button createUsersButton;
 
 	private HashMap<NameRole, ArrayList<String>> accessRights;
 
@@ -46,7 +48,6 @@ public class MainMenuWindowController extends MainWindowController {
 		initializeAccessesRole();
 		cancelButton.setOnAction(event -> {
 			showStageTable("/ChooseRole.fxml");
-
 		});
 		sellersButton.setOnAction(event -> {
 			if (accessRights.get(getNameRole()).contains("MainWindowSellers")) {
@@ -83,6 +84,14 @@ public class MainMenuWindowController extends MainWindowController {
 				showAccessLevelErrorWindow();
 			}
 		});
+		createUsersButton.setOnAction(event -> {
+			if (accessRights.get(getNameRole()).contains("CreateUsers")) {
+				showStageTable("/createUsers/CreateUsers.fxml");
+			} else {
+				showAccessLevelErrorWindow();
+			}
+		});
+
 
 	}
 
@@ -94,21 +103,23 @@ public class MainMenuWindowController extends MainWindowController {
 		accessRights = new HashMap<>();
 		ArrayList<String> listAvailableTabsAdministrator = new ArrayList<>();
 		listAvailableTabsAdministrator.add("MainWindowSellers");
-		//listAvailableTabsAdministrator.add("MainWindowOrders");
 		listAvailableTabsAdministrator.add("MainWindowAccounting");
 		listAvailableTabsAdministrator.add("MainWindowProductRequest");
 		listAvailableTabsAdministrator.add("MainWindowReports");
+		listAvailableTabsAdministrator.add("CreateUsers");
 		ArrayList<String> listAvailableTabsSeller = new ArrayList<>();
 		listAvailableTabsSeller.add("MainWindowSellers");
 		listAvailableTabsSeller.add("MainWindowProductRequest");
-		listAvailableTabsSeller.add("MainWindowAccounting");
 		ArrayList<String> listAvailableTabsManager = new ArrayList<>();
-		listAvailableTabsManager.add("MainWindowOrders");
 		listAvailableTabsManager.add("MainWindowAccounting");
 		listAvailableTabsManager.add("MainWindowProductRequest");
+		listAvailableTabsAdministrator.add("MainWindowReports");
+		ArrayList<String> listAvailableTabsSupplier = new ArrayList<>();
+		listAvailableTabsSupplier.add("MainWindowOrders");
 		accessRights.put(NameRole.Administrator, new ArrayList<>(listAvailableTabsAdministrator));
 		accessRights.put(NameRole.Seller, new ArrayList<>(listAvailableTabsSeller));
 		accessRights.put(NameRole.Manager, new ArrayList<>(listAvailableTabsManager));
+		accessRights.put(NameRole.Supplier, new ArrayList<>(listAvailableTabsSupplier));
 	}
 
 	private void showAccessLevelErrorWindow() {

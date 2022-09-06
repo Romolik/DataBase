@@ -96,31 +96,36 @@ public class TransferProductController implements Initializable {
 				request = "UPDATE Product set NUMBER_OF_PIECES = " + newVolume + " " +
 						  "where ARTICLE_NUMBER = '" + articul + "'";
 				s.executeQuery(request);
-				request = "SELECT ARTICLE_NUMBER, NUMBER_OF_PIECES from product where" +
-						  " name_product = '" + databaseFields.getNameProduct() + "' And " +
-						  "ARTICLE_NUMBER <> '" + articul + "'";
-				rs = s.executeQuery(request);
-				if (rs.next()) {
-					databaseFields.setArticleNumber(rs.getString("ARTICLE_NUMBER"));
-					databaseFields.setNumberOfPieces(rs.getInt("Number_OF_PIECES"));
-					newVolume = Integer.parseInt(volumePiece) + databaseFields.getNumberOfPieces();
-					s.executeQuery("UPDATE product set NUMBER_OF_PIECES = " + newVolume + " " +
-								   "where ARTICLE_NUMBER = '" + databaseFields.getArticleNumber() + "'");
-					connection.commit();
-				} else {
-					String newArticul = newArticulProductTextField.getText();
-					if (Objects.equals(newArticul, "")) {
-						connection.rollback();
-						return;
+				if (!Objects.equals(namePointOfSale, "списать")) {
+					request = "SELECT ARTICLE_NUMBER, NUMBER_OF_PIECES from product Inner Join " +
+							  "Point_of_Sale on product.ID_POINT_OF_SALE = point_of_Sale.ID_POINT_OF_SALE where" +
+							  " name_product = '" + databaseFields.getNameProduct() + "' And " +
+							  "ARTICLE_NUMBER <> '" + articul + "' And NAME_POINT_OF_SALE = '" + namePointOfSale + "'";
+					rs = s.executeQuery(request);
+					if (rs.next()) {
+						databaseFields.setArticleNumber(rs.getString("ARTICLE_NUMBER"));
+						databaseFields.setNumberOfPieces(rs.getInt("Number_OF_PIECES"));
+						newVolume = Integer.parseInt(volumePiece) + databaseFields.getNumberOfPieces();
+						s.executeQuery("UPDATE product set NUMBER_OF_PIECES = " + newVolume + " " +
+									   "where ARTICLE_NUMBER = '" + databaseFields.getArticleNumber() + "'");
+						connection.commit();
+					} else {
+						String newArticul = newArticulProductTextField.getText();
+						if (Objects.equals(newArticul, "")) {
+							connection.rollback();
+							return;
+						}
+						rs = s.executeQuery("Select ID_POINT_OF_SALE from Point_OF_sale " +
+											"where Name_Point_Of_Sale = '" + namePointOfSale + "'");
+						rs.next();
+						databaseFields.setIdPointOfSale(rs.getInt("Id_Point_of_Sale"));
+						newVolume = Integer.parseInt(volumePiece);
+						s.executeQuery("INSERT into product values (NULL, " + databaseFields.getIdTypeProduct() +
+									   ", " +  databaseFields.getIdPointOfSale() + ", '" + databaseFields.getNameProduct() + "', " +
+									   "'" + newArticul + "'," + newVolume + ", 0, 0, 0)");
+						connection.commit();
 					}
-					rs = s.executeQuery("Select ID_POINT_OF_SALE from Point_OF_sale " +
-										"where Name_Point_Of_Sale = '" + namePointOfSale + "'");
-					rs.next();
-					databaseFields.setIdPointOfSale(rs.getInt("Id_Point_of_Sale"));
-					newVolume = Integer.parseInt(volumePiece);
-					s.executeQuery("INSERT into product values (NULL, " + databaseFields.getIdTypeProduct() +
-								   ", " +  databaseFields.getIdPointOfSale() + ", '" + databaseFields.getNameProduct() + "', " +
-								   "'" + newArticul + "'," + newVolume + ", 0, 0, 0)");
+				} else {
 					connection.commit();
 				}
 			} catch (SQLException e) {
@@ -160,9 +165,10 @@ public class TransferProductController implements Initializable {
 				request = "UPDATE Product set \"Quantity(weight_in_grams)\" = " + newVolume + " " +
 						  "where ARTICLE_NUMBER = '" + articul + "'";
 				s.executeQuery(request);
-				request = "SELECT ARTICLE_NUMBER, \"Quantity(weight_in_grams)\" from product where" +
+				request = "SELECT ARTICLE_NUMBER, \"Quantity(weight_in_grams)\" from product Inner Join " +
+						  "Point_of_Sale on product.ID_POINT_OF_SALE = point_of_Sale.ID_POINT_OF_SALE where" +
 						  " name_product = '" + databaseFields.getNameProduct() + "' And " +
-						  "ARTICLE_NUMBER <> '" + articul + "'";
+						  "ARTICLE_NUMBER <> '" + articul + "' And NAME_POINT_OF_SALE = '" + namePointOfSale + "'";
 				rs = s.executeQuery(request);
 				if (rs.next()) {
 					databaseFields.setArticleNumber(rs.getString("ARTICLE_NUMBER"));
@@ -209,6 +215,7 @@ public class TransferProductController implements Initializable {
 			while (rs.next()) {
 				listNamePointOfSale.add(rs.getString("NAME_POINT_OF_SALE"));
 			}
+			listNamePointOfSale.add("списать");
 			ObservableList<String>
 					list = FXCollections.observableArrayList(listNamePointOfSale);
 			choiceBox.setItems(list);

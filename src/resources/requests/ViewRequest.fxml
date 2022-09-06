@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.requests.ViewRequestController">
+    <children>
+        <Button fx:id="orderButton1" layoutX="15.0" layoutY="215.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" text="Заказать">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="15.0" layoutY="270.0" mnemonicParsing="false" text="Выйти">
+            <font>
+                <Font name="Georgia Italic" size="19.0" />
+            </font>
+        </Button>
+        <ChoiceBox fx:id="requestChoiceBox" layoutX="60.0" layoutY="20.0" prefHeight="30.0" prefWidth="300.0" />
+        <ChoiceBox fx:id="nameSupplierChoiceBox" layoutX="60.0" layoutY="70.0" prefHeight="30.0" prefWidth="300.0" />
+        <TextField fx:id="numberPieceTextField" layoutX="15.0" layoutY="175.0" prefHeight="30.0" prefWidth="200.0" promptText="Кол-во(шт)">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="quntityTextField" layoutX="230.0" layoutY="175.0" prefHeight="30.0" prefWidth="150.0" promptText="Масса(г)">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </TextField>
+        <Button fx:id="orderButton2" layoutX="230.0" layoutY="215.0" maxHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" text="Заказать">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Button>
+        <Label layoutX="170.0" layoutY="5.0" text="Запрос">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="155.0" layoutY="55.0" text="Поставщик">
+            <font>
+                <Font name="Georgia Italic" size="13.0" />
+            </font>
+        </Label>
+      <Label layoutX="145.0" layoutY="110.0" text="Дата заказа">
+         <font>
+            <Font name="Georgia Italic" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateOrder" layoutX="90.0" layoutY="130.0" prefHeight="30.0" prefWidth="200.0" promptText="Дата заказа" />
+      <Button fx:id="removeButton" layoutX="290.0" layoutY="270.0" mnemonicParsing="false" text="Удалить">
+         <font>
+            <Font name="Georgia Italic" size="19.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

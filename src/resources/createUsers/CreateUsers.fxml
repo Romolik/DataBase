@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.ru.nsu.shchiptsov.createUsers.CreateUsersController">
+    <children>
+        <Button fx:id="cancelButton" layoutX="670.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Назад">
+            <font>
+                <Font name="Rockwell" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="225.0" layoutY="10.0" text="Создание пользователя">
+            <font>
+                <Font name="Rockwell" size="26.0" />
+            </font>
+        </Label>
+        <Button fx:id="addSellerButton" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Добавить продавца">
+            <font>
+                <Font name="Rockwell" size="18.0" />
+            </font>
+        </Button>
+      <Button fx:id="removeSellerButton" layoutX="570.0" layoutY="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Удалить продавца">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addManagerButton" layoutX="20.0" layoutY="250.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Добавить менеджера">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeManagerButton" layoutX="570.0" layoutY="250.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Удалить менеджера">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addSupplierButton" layoutX="20.0" layoutY="400.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Добавить поставщика">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeSupplierButton" layoutX="570.0" layoutY="400.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Удалить поставщика">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="changeSellerButton" layoutX="300.0" layoutY="100.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Изменить продавца">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="changeManagerButton" layoutX="300.0" layoutY="250.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Изменить менеджера">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="changeSupplierButton" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Изменить поставщика">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

@@ -41,6 +41,7 @@ public class DatabaseFields {
 	private String lastIdOrderShop;
 	private Double costPiece;
 	private Double cost100g;
+	private String status;
 
 	public Double getTradeTurnover() {
 		return tradeTurnover;
@@ -273,6 +274,14 @@ public class DatabaseFields {
 
 	public void setIdTypePointOfSale(String idTypePointOfSale) {
 		this.idTypePointOfSale = idTypePointOfSale;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Integer getNumberSections() {

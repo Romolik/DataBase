@@ -40,7 +40,7 @@ public class MainWindowProductRequestController extends MainWindowController {
 			loadMainMenuWindow(getNameRole(), getIdEmployee());
 		});
 		viewRequestButton.setOnAction(event -> {
-			
+			loadFxml("View Request", "/requests/ViewRequest.fxml");
 		});
 		createRequestButton.setOnAction(event -> {
 			loadFxml("Create Request", "/requests/CreateRequest.fxml");
